@@ -1,22 +1,50 @@
 'use client';
+
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { projects as projectsData, Project } from '@/lib/data/projects'; 
-import ProjectModal from '@/components/shared/ProjectModal';
+import ProjectModal, { ProjectType } from '@/components/shared/ProjectModal';
+
+const projects: ProjectType[] = [
+  {
+    id: '1',
+    title: 'Learners LMS',
+    description: 'Low-latency LMS with Livewire + Laravel — coursework, progress tracking and low-latency updates.',
+    image: '/projects/lms.png',
+    repo: 'https://github.com/your/repo-lms',
+    live: 'https://lms.example.com',
+    tags: ['Laravel', 'Livewire', 'MySQL'],
+  },
+  {
+    id: '2',
+    title: 'AI Code Generator',
+    description: 'Next.js app that generates code from prompts, with authentication and saved history.',
+    image: '/projects/ai-code.png',
+    repo: 'https://github.com/your/repo-ai',
+    live: 'https://ai.example.com',
+    tags: ['Next.js', 'TypeScript', 'OpenAI'],
+  },
+  {
+    id: '3',
+    title: 'URL Shortener',
+    description: 'Fast URL shortener with analytics and rate-limiting.',
+    image: '/projects/shortener.png',
+    repo: 'https://github.com/your/repo-shortener',
+    live: '',
+    tags: ['Node.js', 'Express', 'MongoDB'],
+  },
+];
 
 export default function ProjectsSection() {
   const [filter, setFilter] = useState<string>('All');
-  const [selected, setSelected] = useState<Project | null>(null);
+  const [selected, setSelected] = useState<ProjectType | null>(null);
 
   const tags = useMemo(() => {
     const set = new Set<string>();
-    projectsData.forEach((p) => p.tags.forEach((t) => set.add(t)));
+    projects.forEach((p) => p.tags?.forEach((t) => set.add(t)));
     return ['All', ...Array.from(set)];
   }, []);
 
-  const visible = useMemo(() => {
-    return filter === 'All' ? projectsData : projectsData.filter((p) => p.tags.includes(filter));
-  }, [filter]);
+  const visible = useMemo(() => (filter === 'All' ? projects : projects.filter((p) => p.tags?.includes(filter))), [filter]);
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-950 px-6">
@@ -45,22 +73,38 @@ export default function ProjectsSection() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                className="p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm"
+                className="p-4 rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="flex flex-col h-full">
                   <div className="flex-1">
-                    <h3 className="font-semibold">{p.title}</h3>
-                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{p.summary}</p>
+                    <div className="w-full h-40 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.image} alt={p.title} className="object-cover w-full h-full" />
+                    </div>
+
+                    <h3 className="font-semibold mt-3">{p.title}</h3>
+                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{p.description}</p>
+
                     <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                      {p.tags.map((t) => (
+                      {p.tags?.map((t) => (
                         <span key={t} className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full border text-xs">{t}</span>
                       ))}
                     </div>
                   </div>
 
-                  <div className="mt-4 flex gap-2">
-                    {p.live && <a href={p.live} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded">Live</a>}
-                    {p.repo && <a href={p.repo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded">Repo</a>}
+                  <div className="mt-4 flex gap-2 items-center">
+                    {p.live ? (
+                      <a href={p.live} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded">Live</a>
+                    ) : (
+                      <span className="text-sm px-3 py-1 border rounded text-gray-400">No live</span>
+                    )}
+
+                    {p.repo ? (
+                      <a href={p.repo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded">Repo</a>
+                    ) : (
+                      <span className="text-sm px-3 py-1 border rounded text-gray-400">No repo</span>
+                    )}
+
                     <button onClick={() => setSelected(p)} className="ml-auto px-3 py-1 bg-indigo-600 text-white rounded">Details</button>
                   </div>
                 </div>
