@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FiMenu, FiX } from 'react-icons/fi';
-import ThemeToggle from './ThemeToggle';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,12 +33,9 @@ export default function Header() {
           >
             Download CV
           </a>
-          <ThemeToggle />
         </nav>
 
-        {/* Mobile actions */}
         <div className="md:hidden flex items-center gap-3">
-          <ThemeToggle />
           <button
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((s) => !s)}

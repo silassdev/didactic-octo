@@ -28,7 +28,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 {/* Cover Image */}
                 {post.cover && (
                     <div className="w-full h-64 md:h-96 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 mb-8">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
+
                         <img src={post.cover} alt={post.title} className="w-full h-full object-cover" />
                     </div>
                 )}
@@ -94,7 +94,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     />
                 </div>
 
-                {/* Footer */}
+
                 <footer className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
                     <div className="flex items-center justify-between">
                         <Link href="/#blog" className="text-indigo-600 hover:underline">

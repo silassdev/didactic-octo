@@ -1,10 +1,9 @@
-// lib/data/testimonials.ts
 export type Testimonial = {
     id: string;
     quote: string;
     author: string;
     role?: string;
-    avatar?: string; // optional path to avatar image
+    avatar?: string;
 };
 
 const testimonials: Testimonial[] = [

@@ -10,25 +10,23 @@ export default function Contact() {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const inView = useInView(containerRef, { once: true, margin: '-120px' }); // triggers slightly before fully visible
 
-    // Only create form state once inView becomes true (lazy initialization)
     const [formReady, setFormReady] = useState(false);
 
     useEffect(() => {
         if (inView) setFormReady(true);
     }, [inView]);
 
-    // form fields state
+
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [submitting, setSubmitting] = useState(false);
 
-    // client-side validation
+
     function validate() {
         if (!name.trim()) return 'Please enter your name.';
         if (!email.trim()) return 'Please enter your email.';
-        // simple email regex
         if (!/^\S+@\S+\.\S+$/.test(email)) return 'Please enter a valid email.';
         if (!message.trim() || message.trim().length < 10) return 'Message must be at least 10 characters.';
         return null;
@@ -68,7 +66,7 @@ export default function Contact() {
             setSubject('');
             setMessage('');
         } catch (error) {
-            // network or unexpected error
+
             toast.error('Network error — please try again later.', { id: toastId });
             console.error('Contact submit error:', error);
         } finally {
@@ -94,7 +92,6 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                     className="mt-8"
                 >
-                    {/* If not yet in view, render a lightweight placeholder CTA encouraging scroll */}
                     {!formReady ? (
                         <div className="rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 p-8 text-center">
                             <div className="text-lg font-medium text-gray-700 dark:text-gray-300">Scroll down to reveal the contact form</div>
