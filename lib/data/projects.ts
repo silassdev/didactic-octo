@@ -1,7 +1,7 @@
 export type Project = {
   id: string;
   title: string;
-  summary: string;
+  description: string;
   tags: string[];
   live?: string;
   repo?: string;
@@ -12,23 +12,26 @@ export const projects: Project[] = [
   {
     id: 'mentorlink',
     title: 'MentorLink',
-    summary: 'Platform connecting learners with tech mentors; bookings, reviews and profiles.',
+    description: 'Platform connecting learners with tech mentors; bookings, reviews and profiles.',
     tags: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind'],
     repo: 'https://github.com/you/mentorlink',
     live: 'https://mentorlink.example',
+    image: '/projects/mentorlink.png',
   },
   {
     id: 'devprompt',
     title: 'DevPrompt',
-    summary: 'AI-assisted prompt generator for developers — integrate with LLMs for boilerplate generation.',
+    description: 'AI-assisted prompt generator for developers — integrate with LLMs for boilerplate generation.',
     tags: ['Next.js', 'TypeScript', 'AI', 'HuggingFace'],
     repo: 'https://github.com/you/devprompt',
+    image: '/projects/devprompt.png',
   },
   {
     id: 'shoplite',
     title: 'ShopLite',
-    summary: 'Lightweight ecommerce store with SSR product pages and Stripe checkout.',
+    description: 'Lightweight ecommerce store with SSR product pages and Stripe checkout.',
     tags: ['Next.js', 'Stripe', 'MySQL', 'Tailwind'],
     live: 'https://shoplite.example',
+    image: '/projects/shoplite.png',
   },
 ];

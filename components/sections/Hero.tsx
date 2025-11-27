@@ -34,11 +34,30 @@ export default function Hero() {
           </div>
         </div>
 
-        <div>
-          <div className="h-64 rounded-2xl bg-gradient-to-tr from-indigo-50 to-pink-50 dark:from-black/30 dark:to-black/20 border border-gray-100 dark:border-gray-800 flex items-center justify-center">
-            Preview
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          className="relative"
+        >
+          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-tr from-indigo-50 to-pink-50 dark:from-indigo-900/20 dark:to-pink-900/20 border border-gray-100 dark:border-gray-800 shadow-lg">
+            <img
+              src="/profile.jpg"
+              alt="Silas Tyokaha"
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                if (e.currentTarget.nextElementSibling) {
+                  (e.currentTarget.nextElementSibling as HTMLElement).style.display = 'flex';
+                }
+              }}
+            />
+            {/* Fallback content if image fails to load */}
+            <div className="absolute inset-0 hidden items-center justify-center text-6xl font-bold text-indigo-600 dark:text-indigo-400 bg-gradient-to-tr from-indigo-50 to-pink-50 dark:from-indigo-900/20 dark:to-pink-900/20">
+              ST
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

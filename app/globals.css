@@ -12,11 +12,68 @@ html {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-
 .container {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* Article content styles */
+.article-content h1 {
+  @apply text-3xl font-bold mt-8 mb-4;
+}
+
+.article-content h2 {
+  @apply text-2xl font-bold mt-6 mb-3;
+}
+
+.article-content h3 {
+  @apply text-xl font-semibold mt-5 mb-2;
+}
+
+.article-content p {
+  @apply mb-4 leading-relaxed text-gray-700 dark:text-gray-300;
+}
+
+.article-content ul,
+.article-content ol {
+  @apply mb-4 pl-6 space-y-2;
+}
+
+.article-content li {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+.article-content ul li {
+  @apply list-disc;
+}
+
+.article-content ol li {
+  @apply list-decimal;
+}
+
+.article-content code {
+  @apply bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-indigo-600 dark:text-indigo-400;
+}
+
+.article-content pre {
+  @apply bg-gray-900 dark:bg-black text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.article-content pre code {
+  @apply bg-transparent text-gray-100 p-0;
+}
+
+.article-content strong {
+  @apply font-semibold text-gray-900 dark:text-gray-100;
+}
+
+.article-content a {
+  @apply text-indigo-600 hover:underline;
+}
+
+.article-content blockquote {
+  @apply border-l-4 border-indigo-600 pl-4 italic text-gray-600 dark:text-gray-400 my-4;
 }

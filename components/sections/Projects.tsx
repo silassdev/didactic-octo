@@ -3,36 +3,7 @@
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProjectModal, { ProjectType } from '@/components/shared/ProjectModal';
-
-const projects: ProjectType[] = [
-  {
-    id: '1',
-    title: 'Learners LMS',
-    description: 'Low-latency LMS with Livewire + Laravel — coursework, progress tracking and low-latency updates.',
-    image: '/projects/lms.png',
-    repo: 'https://github.com/your/repo-lms',
-    live: 'https://lms.example.com',
-    tags: ['Laravel', 'Livewire', 'MySQL'],
-  },
-  {
-    id: '2',
-    title: 'AI Code Generator',
-    description: 'Next.js app that generates code from prompts, with authentication and saved history.',
-    image: '/projects/ai-code.png',
-    repo: 'https://github.com/your/repo-ai',
-    live: 'https://ai.example.com',
-    tags: ['Next.js', 'TypeScript', 'OpenAI'],
-  },
-  {
-    id: '3',
-    title: 'URL Shortener',
-    description: 'Fast URL shortener with analytics and rate-limiting.',
-    image: '/projects/shortener.png',
-    repo: 'https://github.com/your/repo-shortener',
-    live: '',
-    tags: ['Node.js', 'Express', 'MongoDB'],
-  },
-];
+import { projects } from '@/lib/data/projects';
 
 export default function ProjectsSection() {
   const [filter, setFilter] = useState<string>('All');
