@@ -6,7 +6,7 @@ export type PostMeta = {
     date: string;
     tags?: string[];
     cover?: string;
-    content: string; // Full article content
+    content: string; 
 };
 
 const posts: PostMeta[] = [
@@ -17,7 +17,7 @@ const posts: PostMeta[] = [
         excerpt: 'Principles and patterns for building responsive, low-latency experiences using server-side techniques and caching.',
         date: '2025-07-12',
         tags: ['performance', 'architecture'],
-        cover: '/blog/low-latency.png',
+        cover: '/Steve-from.png',
         content: `
 # Designing Low-Latency Web Apps
 
@@ -87,7 +87,7 @@ Low-latency applications require a holistic approach combining server optimizati
         excerpt: 'Step-by-step approach to split a legacy app and keep engineering velocity during migration.',
         date: '2024-11-03',
         tags: ['architecture', 'backend'],
-        cover: '/blog/microservices.png',
+        cover: '/fuck-stickman.png',
         content: `
 # From Monolith to Microservices: A Practical Guide
 
@@ -195,7 +195,7 @@ Microservices aren't a silver bullet. Ensure your organization has the maturity 
         excerpt: 'Balancing unit, integration and e2e tests to ship with confidence without slowing down the team.',
         date: '2024-05-20',
         tags: ['testing', 'frontend'],
-        cover: '/blog/testing-frontend.png',
+        cover: '/funny-stickman.png',
         content: `
 # Testing Strategies for Frontend Teams
 

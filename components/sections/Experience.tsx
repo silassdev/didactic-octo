@@ -28,9 +28,7 @@ export default function Experience() {
                                 className="relative"
                             >
                                 <div className="absolute left-0 top-1.5 w-12 h-12 rounded-full bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm">
-                                    {/* optional logo */}
                                     {item.logo ? (
-                                        // eslint-disable-next-line @next/next/no-img-element
                                         <img src={item.logo} alt={item.company} className="w-8 h-8 object-contain" />
                                     ) : (
                                         <div className="w-3 h-3 rounded-full bg-indigo-600" />

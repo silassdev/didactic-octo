@@ -20,7 +20,6 @@ html {
   padding-right: 1rem;
 }
 
-/* Article content styles */
 .article-content h1 {
   @apply text-3xl font-bold mt-8 mb-4;
 }

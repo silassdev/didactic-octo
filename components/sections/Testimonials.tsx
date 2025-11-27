@@ -11,7 +11,7 @@ export default function Testimonials() {
                 <div className="flex items-center justify-between mb-6">
                     <div>
                         <h2 className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">Testimonials</h2>
-                        <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">Selected feedback from colleagues, managers and collaborators.</p>
+                        <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">Selected feedback from colleagues and collaborators.</p>
                     </div>
                 </div>
 

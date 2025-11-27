@@ -22,33 +22,33 @@ const experience: ExperienceItem[] = [
             'Architected backend services (Laravel) and realtime features with Livewire.',
             'Mentored engineers, introduced testing & CI standards.'
         ],
-        logo: '/logos/igniscode.png'
+        logo: '/roblox.png'
     },
     {
         id: 'e2',
-        company: 'CodeAlpha',
-        role: 'Senior Full-stack Engineer',
+        company: 'Oikno',
+        role: 'Frontend Developer',
         start: 'Jan 2023',
         end: 'Aug 2025',
-        location: 'Remote',
+        location: 'Port, NG (Remote)',
         bullets: [
             'Built microservices with Node.js and Express, scaling APIs with Redis caching.',
             'Modernized front-end stack using Next.js, Tailwind and component-driven design.'
         ],
-        logo: '/logos/codealpha.png'
+        logo: '/star-6.png'
     },
     {
         id: 'e3',
-        company: 'OpenSide Projects',
-        role: 'Software Engineer',
+        company: 'APLTODAY',
+        role: 'Wordpress Developer',
         start: 'Jun 2020',
-        end: 'Dec 2022',
+        end: 'Dec 2024',
         location: 'Lagos, NG',
         bullets: [
             'Implemented analytics dashboards and reporting pipelines.',
             'Owned deployment workflows and dockerization.'
         ],
-        logo: '/logos/openside.png'
+        logo: '/kuromi.png'
     }
 ];
 

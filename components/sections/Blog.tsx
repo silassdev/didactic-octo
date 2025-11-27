@@ -28,7 +28,6 @@ export default function Blog() {
                         >
                             <div className="w-full h-40 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800">
                                 {post.cover ? (
-                                    // eslint-disable-next-line @next/next/no-img-element
                                     <img src={post.cover} alt={post.title} className="object-cover w-full h-full" />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center text-gray-400">No cover</div>

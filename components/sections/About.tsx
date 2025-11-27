@@ -7,7 +7,7 @@ export default function About() {
         <section id="about" className="py-24 bg-white dark:bg-gray-950 px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-                    <img src="/profile.jpg" alt="Silas Tyokaha" className="rounded-2xl shadow-lg object-cover h-80 w-full" />
+                    <img src="/angry-stickman.png" alt="Silas Tyokaha" className="rounded-2xl shadow-lg object-cover h-80 w-full" />
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -21,7 +21,7 @@ export default function About() {
 
                     <div className="mt-6 flex gap-3">
                         <a href="#projects" className="px-4 py-2 rounded-lg bg-indigo-600 text-white">See projects</a>
-                        <a href="mailto:you@example.com" className="px-4 py-2 rounded-lg border">Contact</a>
+                        <a href="mailto:9shila@gmail.com" className="px-4 py-2 rounded-lg border">Contact</a>
                     </div>
                 </motion.div>
             </div>

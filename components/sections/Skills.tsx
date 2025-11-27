@@ -130,7 +130,6 @@ export default function Skills() {
                     >
                       <s.Icon className="w-7 h-7 text-indigo-600" aria-hidden />
 
-                      {/* Accessible tooltip: appears on hover & focus */}
                       <span
                         id={tooltipId}
                         role="tooltip"
