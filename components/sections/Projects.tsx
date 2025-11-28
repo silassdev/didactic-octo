@@ -50,7 +50,6 @@ export default function ProjectsSection() {
                 <div className="flex flex-col h-full">
                   <div className="flex-1">
                     <div className="w-full h-40 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={p.image} alt={p.title} className="object-cover w-full h-full" />
                     </div>
 

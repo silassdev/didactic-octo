@@ -8,6 +8,7 @@ export type ProjectType = {
   id: string;
   title: string;
   description: string;
+  details?: string;
   image?: string;
   repo?: string;
   live?: string;
@@ -45,6 +46,7 @@ export default function ProjectModal({ project, onClose }: { project: ProjectTyp
           <div className="flex-1">
             <h3 className="text-lg font-semibold">{project.title}</h3>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{project.description}</p>
+            {project.details && <p className="mt-4 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{project.details}</p>}
 
             <div className="mt-4 flex flex-wrap gap-2">
               {(project.tags || []).map((t) => (

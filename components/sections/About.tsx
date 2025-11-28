@@ -7,7 +7,13 @@ export default function About() {
         <section id="about" className="py-24 bg-white dark:bg-gray-950 px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
-                    <img src="/angry-stickman.png" alt="Silas Tyokaha" className="rounded-2xl shadow-lg object-cover h-80 w-full" />
+                    <div className="relative h-80 w-full rounded-2xl overflow-hidden bg-indigo-600 shadow-lg group">
+                        <img
+                            src="/silassdev.png"
+                            alt="Silas Tyokaha"
+                            className="w-full h-full object-cover object-top mix-blend-multiply filter grayscale opacity-90 scale-110 transition-transform duration-700 group-hover:scale-100"
+                        />
+                    </div>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
