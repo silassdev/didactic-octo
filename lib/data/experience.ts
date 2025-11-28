@@ -18,7 +18,7 @@ const experience: ExperienceItem[] = [
         end: 'Present',
         location: 'Benue, NG (Hybrid)',
         bullets: [
-            'Led design & delivery of a low-latency LMS used by thousands of learners.',
+            'Leading design & delivery of a low-latency LMS.',
             'Architected backend services (Laravel) and realtime features with Livewire.',
             'Mentored engineers, introduced testing & CI standards.'
         ],
@@ -35,7 +35,7 @@ const experience: ExperienceItem[] = [
             'Built microservices with Node.js and Express, scaling APIs with Redis caching.',
             'Modernized front-end stack using Next.js, Tailwind and component-driven design.'
         ],
-        logo: '/star-6.png'
+        logo: '/roblox.png'
     },
     {
         id: 'e3',

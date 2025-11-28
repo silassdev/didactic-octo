@@ -16,7 +16,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Prisma', 'MySQL', 'Tailwind'],
     repo: 'https://github.com/silassdev/mentorlink',
     live: 'https://mentorlink.example',
-    image: '/angry-stickman.png',
+    image: '/roblox.png',
   },
   {
     id: 'paystackdemo',
@@ -29,8 +29,8 @@ export const projects: Project[] = [
   {
     id: 'hostel',
     title: 'Hostel Management System',
-    description: 'A full-stack Next.js 15 application for managing student hostel allocations, payments, and support tickets. Built with TypeScript, Prisma + PostgreSQL, NextAuth for authentication, Paystack for payments, and nodemailer for receipts.',
-    tags: ['Next.js', 'Paystack', 'Prisma', 'PostgreSQL', 'Nodemailer', 'Tailwind'],
+    description: 'A full-stack Next.js application for managing student hostel allocations, payments, and support tickets. Built with TypeScript, Prisma + PostgreSQL, NextAuth for authentication, Paystack for payments, and nodemailer for receipts.',
+    tags: ['Next.js', 'Paystack API', 'Prisma', 'PostgreSQL', 'Nodemailer', 'Tailwind'],
     repo: 'https://github.com/silassdev/redesigned-hstel',
     image: '/hostel.png',
   },
