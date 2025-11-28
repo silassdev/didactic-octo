@@ -39,6 +39,15 @@ export const projects: Project[] = [
     image: '/hostel.png',
   },
   {
+    id: 'apltoday',
+    title: 'Apltoday',
+    description: 'A Wordpress Blog Rendering site',
+    details: 'ShopLite is a minimalist e-commerce platform focused on speed and simplicity. It utilizes Server-Side Rendering (SSR) for fast initial page loads and SEO benefits. The integration with Stripe ensures a smooth and secure checkout experience for customers.',
+    tags: ['Wordpress', 'PHP', 'MySQL'],
+    live: 'https:www.apltoday.com',
+    image: '/apltoday.png',
+  },
+  {
     id: 'shoplite',
     title: 'ShopLite',
     description: 'Lightweight ecommerce store with SSR product pages and Stripe checkout.',

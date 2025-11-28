@@ -30,25 +30,26 @@ const experience: ExperienceItem[] = [
         role: 'Frontend Developer',
         start: 'Jan 2023',
         end: 'Aug 2025',
-        location: 'Port, NG (Remote)',
+        location: 'Rivers, NG (Remote)',
         bullets: [
-            'Built microservices with Node.js and Express, scaling APIs with Redis caching.',
-            'Modernized front-end stack using Next.js, Tailwind and component-driven design.'
+            'Led checkout flow development, added Jest + RTL tests for core UI, and introduced ESLint + pre-commit hooks + GitHub Actions CI, cutting review cycles by 6%.',
+            'Implemented reusable component systems and improved UX consistency across multiple products.',
+            'Integrated REST APIs and optimized client-side logic for speed, accessibility, and maintainability.',
+            'Collaborated with backend teams to streamline data flows and reduce front-end load times.'
         ],
-        logo: '/star.png'
+        logo: '/oikno.png'
     },
     {
         id: 'e3',
         company: 'APLTODAY',
-        role: 'Wordpress Developer',
-        start: 'Jun 2020',
-        end: 'Dec 2024',
-        location: 'Lagos, NG',
+        role: 'Frontend & WordPress Developer',
+        start: 'Jan 2023',
+        end: 'Aug 2025',
+        location: 'Lagos, NG (Contract)',
         bullets: [
-            'Implemented analytics dashboards and reporting pipelines.',
-            'Owned deployment workflows and dockerization.'
-        ],
-        logo: '/star.png'
+            'Developed and customized WordPress themes, templates, and blog components using PHP, Gutenberg, and ACF.',
+            'Optimized performance (images, caching, critical CSS) to boost Lighthouse score +5% and lower load time to 2.1s; built reusable themes and increased ad RPM by 5%.'],
+        logo: '/ap.png'
     }
 ];
 

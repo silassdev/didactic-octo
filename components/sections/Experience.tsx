@@ -27,9 +27,9 @@ export default function Experience() {
                                 transition={{ duration: 0.45, delay: i * 0.06 }}
                                 className="relative"
                             >
-                                <div className="absolute -left-12 top-1.5 w-12 h-12 rounded-full bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm">
+                                <div className="absolute -left-12 top-1.5 w-12 h-12 rounded-full bg-white dark:bg-black/40 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm overflow-hidden">
                                     {item.logo ? (
-                                        <img src={item.logo} alt={item.company} className="w-8 h-8 object-contain" />
+                                        <img src={item.logo} alt={item.company} className="w-full h-full object-cover scale-110" />
                                     ) : (
                                         <div className="w-3 h-3 rounded-full bg-indigo-600" />
                                     )}

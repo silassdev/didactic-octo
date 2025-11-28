@@ -12,7 +12,7 @@ const testimonials: Testimonial[] = [
         quote: "Silas shipped high-impact features quickly and kept the codebase clean and well-tested. An absolute pleasure to work with.",
         author: 'Aisha Bello',
         role: 'Product Manager, Igniscode',
-        avatar: '/star-6.png'
+        avatar: '/oikno.png'
     },
     {
         id: 't2',
