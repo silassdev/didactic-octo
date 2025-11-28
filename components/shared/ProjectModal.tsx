@@ -71,7 +71,7 @@ export default function ProjectModal({ project, onClose }: { project: ProjectTyp
 
           <div className="w-40 h-32 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
             {project.image ? (
-              <img src={project.image} alt={project.title} className="object-cover w-full h-full" />
+              <img src={project.image} alt={project.title} className="object-cover w-full h-full scale-110" />
             ) : (
               <div className="text-xs text-gray-500">No image</div>
             )}

@@ -22,7 +22,7 @@ const experience: ExperienceItem[] = [
             'Architected backend services (Laravel) and realtime features with Livewire.',
             'Mentored engineers, introduced testing & CI standards.'
         ],
-        logo: '/star.png'
+        logo: '/svg.png'
     },
     {
         id: 'e2',

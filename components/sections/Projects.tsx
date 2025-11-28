@@ -50,7 +50,7 @@ export default function ProjectsSection() {
                 <div className="flex flex-col h-full">
                   <div className="flex-1">
                     <div className="w-full h-40 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-800">
-                      <img src={p.image} alt={p.title} className="object-cover w-full h-full" />
+                      <img src={p.image} alt={p.title} className="object-cover w-full h-full scale-110 transition-transform duration-500 hover:scale-100" />
                     </div>
 
                     <h3 className="font-semibold mt-3">{p.title}</h3>
