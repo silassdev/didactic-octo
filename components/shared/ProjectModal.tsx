@@ -32,7 +32,7 @@ export default function ProjectModal({ project, onClose }: { project: ProjectTyp
     >
       <motion.div onClick={onClose} initial={{ opacity: 0 }} animate={{ opacity: 0.6 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-black" />
 
-      <motion.dialog
+      <motion.div
         role="dialog"
         aria-modal="true"
         initial={{ y: 20, opacity: 0 }}
@@ -83,7 +83,7 @@ export default function ProjectModal({ project, onClose }: { project: ProjectTyp
         <button onClick={onClose} aria-label="Close modal" className="absolute top-3 right-3 p-2 rounded-md text-gray-600 dark:text-gray-300">
           <FiX />
         </button>
-      </motion.dialog>
+      </motion.div>
     </motion.div>
   );
 }

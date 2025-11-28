@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FiGithub } from 'react-icons/fi';
 import ProjectModal, { ProjectType } from '@/components/shared/ProjectModal';
 import { projects } from '@/lib/data/projects';
 
@@ -71,9 +72,13 @@ export default function ProjectsSection() {
                     )}
 
                     {p.repo ? (
-                      <a href={p.repo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded">Repo</a>
+                      <a href={p.repo} target="_blank" rel="noreferrer" className="text-sm px-3 py-1 border rounded hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="GitHub Repo">
+                        <FiGithub className="w-4 h-4" />
+                      </a>
                     ) : (
-                      <span className="text-sm px-3 py-1 border rounded text-gray-400">No repo</span>
+                      <span className="text-sm px-3 py-1 border rounded text-gray-400">
+                        <FiGithub className="w-4 h-4 opacity-50" />
+                      </span>
                     )}
 
                     <button onClick={() => setSelected(p)} className="ml-auto px-3 py-1 bg-indigo-600 text-white rounded">Details</button>

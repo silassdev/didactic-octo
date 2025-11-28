@@ -22,7 +22,7 @@ const experience: ExperienceItem[] = [
             'Architected backend services (Laravel) and realtime features with Livewire.',
             'Mentored engineers, introduced testing & CI standards.'
         ],
-        logo: '/roblox.png'
+        logo: '/star.png'
     },
     {
         id: 'e2',
@@ -35,7 +35,7 @@ const experience: ExperienceItem[] = [
             'Built microservices with Node.js and Express, scaling APIs with Redis caching.',
             'Modernized front-end stack using Next.js, Tailwind and component-driven design.'
         ],
-        logo: '/roblox.png'
+        logo: '/star.png'
     },
     {
         id: 'e3',
@@ -48,7 +48,7 @@ const experience: ExperienceItem[] = [
             'Implemented analytics dashboards and reporting pipelines.',
             'Owned deployment workflows and dockerization.'
         ],
-        logo: '/kuromi.png'
+        logo: '/star.png'
     }
 ];
 
