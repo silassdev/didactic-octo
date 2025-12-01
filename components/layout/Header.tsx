@@ -26,7 +26,7 @@ export default function Header() {
           <Link href="#skills" className="hover:text-indigo-500 transition-colors">Skills</Link>
           <Link href="#projects" className="hover:text-indigo-500 transition-colors">Projects</Link>
           <Link href="#contact" className="hover:text-indigo-500 transition-colors">Contact</Link>
-          <a href="https://example.com/your-resume.pdf"
+          <a href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-3 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-600 text-white text-sm hover:opacity-95"
@@ -60,7 +60,7 @@ export default function Header() {
             <Link href="#projects" onClick={() => setOpen(false)} className="py-2">Projects</Link>
             <Link href="#contact" onClick={() => setOpen(false)} className="py-2">Contact</Link>
             <a
-              href="https://example.com/your-resume.pdf"
+              href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"

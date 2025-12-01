@@ -21,7 +21,7 @@ export const education: EducationItem[] = [
         institution: 'Benue State Polytechnic, Ugbokolo',
         degree: 'National Diploma in Computer Engineering',
         year: '2021 — 2023',
-        url: 'https://example.com',
+        url: 'https://apltoday.com/wp-content/uploads/2025/12/e7a06b0f-d712-43fe-8e3c-fc19f9de0da3-1.jpeg',
         logo: '/bsp.png'
     },
     {
