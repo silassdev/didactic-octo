@@ -19,8 +19,7 @@ const experience: ExperienceItem[] = [
         location: 'Benue, NG (Hybrid)',
         bullets: [
             'Leading design & delivery of a low-latency LMS.',
-            'Architected backend services (Laravel) and realtime features with Livewire.',
-            'Mentored engineers, introduced testing & CI standards.'
+            'Architected backend services (Laravel) and realtime features with Livewire.'
         ],
         logo: '/svg.png'
     },

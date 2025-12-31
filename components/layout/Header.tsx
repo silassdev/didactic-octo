@@ -9,29 +9,38 @@ export default function Header() {
 
   return (
     <motion.header
-      initial={{ y: -30, opacity: 0 }}
+      initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full backdrop-blur-md bg-white/30 dark:bg-gray-900/30 shadow-sm z-50"
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50"
     >
-      <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="w-8 h-8 rounded-md bg-gradient-to-tr from-indigo-500 to-pink-500" aria-hidden />
-          <span className="text-lg font-semibold text-indigo-600 dark:text-indigo-400">Silas Tyokaha</span>
+      <div className="backdrop-blur-xl bg-white/70 dark:bg-gray-950/70 border border-white/20 dark:border-gray-800/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl px-6 py-3 flex justify-between items-center transition-all duration-300 hover:border-indigo-500/30">
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 group-hover:rotate-12 transition-transform duration-300" />
+          <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+            Silas Tyokaha
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          <Link href="#about" className="hover:text-indigo-500 transition-colors">About</Link>
-          <Link href="#skills" className="hover:text-indigo-500 transition-colors">Skills</Link>
-          <Link href="#projects" className="hover:text-indigo-500 transition-colors">Projects</Link>
-          <Link href="#contact" className="hover:text-indigo-500 transition-colors">Contact</Link>
-          <a href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
+        <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+            <Link
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors relative group"
+            >
+              {item}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full" />
+            </Link>
+          ))}
+          <a
+            href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-3 inline-flex items-center gap-2 px-3 py-1 rounded-md bg-indigo-600 text-white text-sm hover:opacity-95"
+            className="px-4 py-2 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm hover:scale-105 transition-transform duration-200 shadow-lg shadow-indigo-500/10"
           >
-            Download CV
+            Resume
           </a>
         </nav>
 
@@ -39,7 +48,7 @@ export default function Header() {
           <button
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((s) => !s)}
-            className="p-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white/60 dark:bg-black/40"
+            className="p-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/50 dark:bg-gray-900/50 hover:bg-white dark:hover:bg-gray-800 transition-colors"
           >
             {open ? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5" />}
           </button>
@@ -48,22 +57,28 @@ export default function Header() {
 
       {/* Mobile menu panel */}
       <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={open ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
-        transition={{ duration: 0.25 }}
-        className="md:hidden overflow-hidden"
+        initial={{ y: -20, opacity: 0 }}
+        animate={open ? { y: 0, opacity: 1 } : { y: -20, opacity: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+        className={`${open ? 'block' : 'hidden'} md:hidden mt-4 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xl border border-white/20 dark:border-gray-800/50 rounded-2xl shadow-2xl overflow-hidden`}
       >
-        <div className="px-6 pb-4">
-          <nav className="flex flex-col gap-3 text-sm">
-            <Link href="#about" onClick={() => setOpen(false)} className="py-2">About</Link>
-            <Link href="#skills" onClick={() => setOpen(false)} className="py-2">Skills</Link>
-            <Link href="#projects" onClick={() => setOpen(false)} className="py-2">Projects</Link>
-            <Link href="#contact" onClick={() => setOpen(false)} className="py-2">Contact</Link>
+        <div className="p-4">
+          <nav className="flex flex-col gap-2">
+            {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+              <Link
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setOpen(false)}
+                className="px-4 py-3 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium"
+              >
+                {item}
+              </Link>
+            ))}
             <a
               href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-flex items-center gap-2 px-3 py-2 rounded-md bg-indigo-600 text-white text-sm"
+              className="mt-2 px-4 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium text-center shadow-lg shadow-indigo-500/20"
             >
               Download CV
             </a>

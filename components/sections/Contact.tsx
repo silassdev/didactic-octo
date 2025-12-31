@@ -74,89 +74,99 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-950 px-6" ref={containerRef}>
-      <div className="max-w-4xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">Contact</h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-xl">
-              Want to collaborate or hire? Send me a message — I usually reply within 48 hours.
+    <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-900 px-6" ref={containerRef}>
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white mb-6">
+              Let's <span className="text-indigo-600 dark:text-indigo-400">Collaborate</span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+              Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new opportunities and creative ideas.
             </p>
-          </div>
-        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-          className="mt-8"
-        >
-          {!formReady ? (
-            <div className="rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-800 p-8 text-center">
-              <div className="text-lg font-medium text-gray-700 dark:text-gray-300">Scroll down to reveal the contact form</div>
-              <div className="text-sm mt-2 text-gray-500">Form will be created when you reach this section.</div>
+            <div className="space-y-6">
+              {[
+                { label: 'Email', value: '9shila@gmail.com', href: 'mailto:9shila@gmail.com' },
+                { label: 'Location', value: 'Lagos, Nigeria', href: '#' },
+                { label: 'Availability', value: 'Open for new projects', href: '#' },
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col">
+                  <span className="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-1">{item.label}</span>
+                  <a href={item.href} className="text-xl font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    {item.value}
+                  </a>
+                </div>
+              ))}
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 shadow-sm">
-              <div className="grid md:grid-cols-2 gap-4">
-                <label className="flex flex-col">
-                  <span className="text-sm text-gray-600 dark:text-gray-300 mb-1">Name</span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <form onSubmit={handleSubmit} className="p-8 md:p-10 rounded-3xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 shadow-2xl shadow-gray-200/50 dark:shadow-none">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 dark:text-gray-300">Name</label>
                   <input
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name"
-                    className="px-3 py-2 rounded-md border bg-transparent focus:ring-2 focus:ring-indigo-500 outline-none"
+                    placeholder="John Doe"
+                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all"
                     disabled={submitting}
                   />
-                </label>
-
-                <label className="flex flex-col">
-                  <span className="text-sm text-gray-600 dark:text-gray-300 mb-1">Email</span>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 dark:text-gray-300">Email</label>
                   <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="you@domain.com"
+                    placeholder="john@example.com"
                     type="email"
-                    className="px-3 py-2 rounded-md border bg-transparent focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all"
                     disabled={submitting}
                   />
-                </label>
+                </div>
               </div>
 
-              <label className="flex flex-col mt-4">
-                <span className="text-sm text-gray-600 dark:text-gray-300 mb-1">Subject</span>
+              <div className="space-y-2 mb-6">
+                <label className="text-sm font-bold text-gray-700 dark:text-gray-300">Subject</label>
                 <input
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
-                  placeholder="Brief subject"
-                  className="px-3 py-2 rounded-md border bg-transparent focus:ring-2 focus:ring-indigo-500 outline-none"
+                  placeholder="How can I help you?"
+                  className="w-full px-5 py-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all"
                   disabled={submitting}
                 />
-              </label>
+              </div>
 
-              <label className="flex flex-col mt-4">
-                <span className="text-sm text-gray-600 dark:text-gray-300 mb-1">Message</span>
+              <div className="space-y-2 mb-8">
+                <label className="text-sm font-bold text-gray-700 dark:text-gray-300">Message</label>
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell me about your project or question..."
-                  className="px-3 py-2 rounded-md border bg-transparent focus:ring-2 focus:ring-indigo-500 outline-none min-h-[140px]"
+                  placeholder="Your message here..."
+                  className="w-full px-5 py-4 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 outline-none transition-all min-h-[160px] resize-none"
                   disabled={submitting}
                 />
-              </label>
-
-              <div className="mt-4 flex items-center gap-3">
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-60"
-                >
-                  {submitting ? 'Sending…' : 'Send Message'}
-                </button>
               </div>
+
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full py-5 rounded-2xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-black text-lg hover:scale-[1.02] active:scale-[0.98] transition-all disabled:opacity-50 shadow-xl shadow-indigo-500/10"
+              >
+                {submitting ? 'Sending Message...' : 'Send Message'}
+              </button>
             </form>
-          )}
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

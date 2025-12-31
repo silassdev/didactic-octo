@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --font-roboto: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  --font-inter: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
 .font-sans {
-  font-family: var(--font-roboto);
+  font-family: var(--font-inter);
 }
 
 html {

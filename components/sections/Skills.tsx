@@ -95,49 +95,51 @@ const groups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-950 px-6">
+    <section id="skills" className="py-24 bg-white dark:bg-gray-900 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2 className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">Skills</h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">Explore my stack.</p>
-          </div>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 dark:text-white mb-4">
+            Technical <span className="text-indigo-600 dark:text-indigo-400">Toolkit</span>
+          </h2>
+          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl">
+            A comprehensive overview of the technologies and tools I use to bring ideas to life.
+          </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {groups.map((g, gi) => (
             <motion.div
               key={g.title}
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.45, delay: gi * 0.06 }}
-              className="p-4 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700"
+              transition={{ duration: 0.5, delay: gi * 0.1 }}
+              viewport={{ once: true }}
+              className="p-8 bg-gray-50 dark:bg-gray-800/50 rounded-3xl border border-gray-100 dark:border-gray-800 hover:border-indigo-500/30 transition-colors group"
             >
-              <h3 className="text-lg font-semibold mb-4">{g.title}</h3>
+              <h3 className="text-xl font-bold mb-6 text-gray-900 dark:text-white flex items-center gap-3">
+                <span className="w-2 h-6 bg-indigo-500 rounded-full" />
+                {g.title}
+              </h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-4">
                 {g.skills.map((s) => {
                   const tooltipId = `tt-${s.id}`;
                   return (
-                    <motion.button
+                    <motion.div
                       key={s.id}
-                      whileHover={{ scale: 1.06 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="group relative w-14 h-14 rounded-xl flex items-center justify-center bg-white/60 dark:bg-black/40 border border-gray-200 dark:border-gray-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      aria-describedby={tooltipId}
-                      title={s.name}
-                      type="button"
+                      whileHover={{ scale: 1.1, y: -5 }}
+                      className="group relative"
                     >
-                      <s.Icon className="w-7 h-7 text-indigo-600" aria-hidden />
-
-                      <span
-                        id={tooltipId}
-                        role="tooltip"
-                        className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-gray-800 text-white text-xs px-2 py-1 opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus:opacity-100 group-focus:translate-y-0"
+                      <div
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:shadow-indigo-500/10 group-hover:border-indigo-500/50"
+                        title={s.name}
                       >
+                        <s.Icon className="w-8 h-8 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
+                      </div>
+                      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold uppercase tracking-wider text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
                         {s.name}
                       </span>
-                    </motion.button>
+                    </motion.div>
                   );
                 })}
               </div>
