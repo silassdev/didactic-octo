@@ -128,15 +128,14 @@ export default function Skills() {
                     <motion.div
                       key={s.id}
                       whileHover={{ scale: 1.1, y: -5 }}
-                      className="group relative"
+                      className="group relative hover:z-50"
                     >
                       <div
                         className="w-16 h-16 rounded-2xl flex items-center justify-center bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300 group-hover:shadow-xl group-hover:shadow-indigo-500/10 group-hover:border-indigo-500/50"
-                        title={s.name}
                       >
                         <s.Icon className="w-8 h-8 text-gray-700 dark:text-gray-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" />
                       </div>
-                      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold uppercase tracking-wider text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold uppercase tracking-widest text-white bg-gray-900 dark:bg-gray-700 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
                         {s.name}
                       </span>
                     </motion.div>

@@ -6,14 +6,19 @@ export default function About() {
     return (
         <section id="about" className="py-24 bg-gray-50 dark:bg-gray-900 px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-                <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-indigo-600 shadow-2xl group">
                         <img
                             src="/silassdev.png"
                             alt="Silas Tyokaha"
-                            className="w-full h-full object-cover object-top mix-blend-overlay filter grayscale opacity-90 scale-105 transition-transform duration-700 group-hover:scale-100"
+                            className="w-full h-full object-cover object-center transform-gpu scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/10 to-transparent pointer-events-none" />
                     </div>
                 </motion.div>
 
