@@ -45,7 +45,7 @@ export default function ProjectModal({ project, onClose }: { project: ProjectTyp
         initial={{ y: 50, scale: 0.95, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}
         exit={{ y: 20, scale: 0.95, opacity: 0 }}
-        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
         className="relative z-10 max-w-4xl w-full bg-white dark:bg-gray-900 rounded-[32px] shadow-2xl border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col md:flex-row"
       >
         <button

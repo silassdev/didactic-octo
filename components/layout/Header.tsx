@@ -11,7 +11,7 @@ export default function Header() {
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
       className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50"
     >
       <div className="backdrop-blur-xl bg-white/70 dark:bg-gray-950/70 border border-white/20 dark:border-gray-800/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl px-6 py-3 flex justify-between items-center transition-all duration-300 hover:border-indigo-500/30">

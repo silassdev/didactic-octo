@@ -37,8 +37,8 @@ export default function ProjectsSection() {
                 key={t}
                 onClick={() => setFilter(t)}
                 className={`px-5 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${filter === t
-                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25'
-                    : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25'
+                  : 'bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700'
                   }`}
               >
                 {t}
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
                 className="group relative flex flex-col h-full rounded-3xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800 overflow-hidden hover:border-indigo-500/50 transition-colors"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
