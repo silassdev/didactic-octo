@@ -16,9 +16,8 @@ export default function Header() {
     >
       <div className="backdrop-blur-xl bg-white/70 dark:bg-gray-950/70 border border-white/20 dark:border-gray-800/50 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-2xl px-6 py-3 flex justify-between items-center transition-all duration-300 hover:border-indigo-500/30">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 group-hover:rotate-12 transition-transform duration-300" />
           <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-            Silas Tyokaha
+            Silas
           </span>
         </Link>
 

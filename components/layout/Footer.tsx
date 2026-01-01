@@ -7,9 +7,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <div className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
-              Silas Tyokaha
+              Silas
             </span>
           </div>
 
@@ -27,10 +26,10 @@ export default function Footer() {
 
           <div className="flex gap-4">
             {[
-              { icon: FiGithub, href: 'https://github.com' },
-              { icon: FiTwitter, href: 'https://twitter.com' },
-              { icon: FiLinkedin, href: 'https://linkedin.com' },
-              { icon: FiMail, href: 'mailto:contact@example.com' },
+              { icon: FiGithub, href: 'https://github.com/silassdev' },
+              { icon: FiTwitter, href: 'https://twitter.com/silassdev' },
+              { icon: FiLinkedin, href: 'https://linkedin.com/in/silassdev' },
+              { icon: FiMail, href: 'mailto:9shila@gmail.com' },
             ].map((social, i) => (
               <a
                 key={i}
