@@ -15,7 +15,6 @@ export default function Experience() {
                 </div>
 
                 <div className="relative">
-                    {/* vertical line */}
                     <div className="absolute left-6 top-6 bottom-6 w-px bg-gray-200 dark:bg-gray-800" />
 
                     <div className="space-y-8 pl-12">
