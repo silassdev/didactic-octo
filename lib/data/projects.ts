@@ -11,11 +11,21 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'shepherd-ai',
+    title: 'Shepherd-Ai',
+    description: 'AI Spiritual Assistant: Conversational interface powered by Google Gemini.',
+    details: 'AI web application designed to provide compassionate, scripture-rooted guidance and spiritual support through advanced artificial intelligence. It combines modern web technology with biblical wisdom to assist users in their daily spiritual walk..',
+    tags: ['Next.js', 'MongoDB', 'Gemini', 'Tailwind CSS', 'Stripe', 'Flutterwave'],
+    repo: 'https://github.com/silassdev/miniature-waddle',
+    live: 'https://git-battless.vercel.app/',
+    image: '/shepherd-ai.png',
+  },
+  {
     id: 'gitbattle',
     title: 'GitBattle',
     description: 'Compare developer profiles, visualize strengths, and discover the community leaderboard.',
     details: 'GitBattle is a modern, full-stack web application that allows developers to compare GitHub profiles using a weighted scoring algorithm.',
-    tags: ['Next.js', 'MongoDB', 'Shadcn/ui', 'Tailwind CSS', 'Auth.js', 'Recharts'],
+    tags: ['Next.js', 'MongoDB', 'Shadcn/ui', 'Tailwind CSS', 'Oauth', 'Recharts'],
     repo: 'https://github.com/silassdev/silver-lamp',
     live: 'https://git-battless.vercel.app/',
     image: '/gitbattle.png',
@@ -23,8 +33,8 @@ export const projects: Project[] = [
   {
     id: 'laravel-lms',
     title: 'Laravel LMS',
-    description: 'A comprehensive Learning Management System (LMS) built with Laravel, designed to facilitate education',
-    details: 'A comprehensive Learning Management System (LMS) built with Laravel, designed to facilitate online education through role-based access for administrators, trainers, and students. This application leverages modern web technologies to provide a seamless experience for managing courses, blogs, user profiles, and more.',
+    description: 'A Low-latency Learning Management System (LMS) built with Laravel, designed to facilitate education',
+    details: 'This application leverages modern web technologies to provide a seamless experience for managing courses, blogs, user profiles, and more.',
     tags: ['Laravel', 'PHP', 'MySQL', 'Livewire', 'Tailwind'],
     repo: 'https://github.com/silassdev/crispy-sniffle',
     image: '/github.png',
@@ -32,7 +42,7 @@ export const projects: Project[] = [
   {
     id: 'ecommerce-next',
     title: 'E-commerce',
-    description: 'A modern full-stack e-commerce scaffold built with Next.js App Router, designed for a computer & accessories store. Includes a production-ready frontend, API routes, MongoDB backend, and a lightweight admin system.',
+    description: 'Full-stack e-commerce designed for a computer & accessories store.',
     details: 'A modern full-stack e-commerce scaffold built with Next.js App Router, designed for a computer & accessories store. Includes a production-ready frontend, API routes, MongoDB backend, and a lightweight admin system.',
     tags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind.css'],
     repo: 'https://github.com/silassdev/fantastic-giggle',
@@ -58,16 +68,6 @@ export const projects: Project[] = [
     repo: 'https://github.com/silassdev/redesigned-hstel',
     live: 'https://redesigned-hstel.vercel.app/',
     image: '/hostel.png',
-  },
-  {
-    id: 'dashboardui',
-    title: 'Dashboard UI',
-    description: 'A dashboard UI built with Next.js, TypeScript, and Prisma.',
-    details: 'A dashboard UI built with Next.js, TypeScript, and Prisma.',
-    tags: ['React', 'GraphQL', 'Tailwind'],
-    repo: 'https://github.com/silassdev/dashboard-ui',
-    live: 'https://dashb-delta.vercel.app/dashboard',
-    image: '/dash.png',
   },
   {
     id: 'text-to-speech-converter',
