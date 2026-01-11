@@ -18,7 +18,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'MongoDB', 'Gemini', 'Tailwind CSS', 'Stripe', 'Flutterwave'],
     repo: 'https://github.com/silassdev/miniature-waddle',
     live: 'https://git-battless.vercel.app/',
-    image: '/shepherd-ai.png',
+    image: '/shep.png',
   },
   {
     id: 'gitbattle',
