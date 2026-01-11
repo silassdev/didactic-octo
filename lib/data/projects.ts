@@ -17,7 +17,7 @@ export const projects: Project[] = [
     details: 'AI web application designed to provide compassionate, scripture-rooted guidance and spiritual support through advanced artificial intelligence. It combines modern web technology with biblical wisdom to assist users in their daily spiritual walk..',
     tags: ['Next.js', 'MongoDB', 'Gemini', 'Tailwind CSS', 'Stripe', 'Flutterwave'],
     repo: 'https://github.com/silassdev/miniature-waddle',
-    live: 'https://git-battless.vercel.app/',
+    live: 'https://shepherd-xai.vercel.app/',
     image: '/shep.png',
   },
   {
