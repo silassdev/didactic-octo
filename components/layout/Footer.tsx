@@ -45,12 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-900 gap-4 text-sm text-gray-500 dark:text-gray-400">
-          <p>© {new Date().getFullYear()} Silas Tyokaha. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Built with
-            <span className="text-pink-500">❤️</span>
-            using <span className="font-semibold text-gray-900 dark:text-white">Next.js</span>
-          </p>
+          <p>© {new Date().getFullYear()} Silas . All rights reserved.</p>
         </div>
       </div>
     </footer>
