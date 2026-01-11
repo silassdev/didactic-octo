@@ -1,5 +1,4 @@
 import './globals.css';
-import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -12,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'Modern portfolio',
+  title: 'Silas Profile',
+  description: 'Web Developer portfolio',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
