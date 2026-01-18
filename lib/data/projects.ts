@@ -11,6 +11,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'allpilar-solution',
+    title: 'IT Solution',
+    description: 'Production-ready web + AI that ships fast and scales effortlessly.',
+    details: 'Full-stack engineering: type-safe apps, CI/CD, IaC & cloud autoscaling, plus practical AI pipelines (embeddings → inference) built with React, Next.js, and Laravel.',
+    tags: ['Next.js', 'Tailwind CSS'],
+    repo: 'https://github.com/silassdev/urban-tribble',
+    live: 'https://allpilar.xyz/',
+    image: '/aps.png',
+  },
+  {
     id: 'shepherd-ai',
     title: 'Shepherd-Ai',
     description: 'AI Spiritual Assistant: Conversational interface powered by Google Gemini.',
