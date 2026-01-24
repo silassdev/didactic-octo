@@ -27,7 +27,7 @@ export const projects: Project[] = [
     details: 'Micro-CRM is a sleek, all-in-one CRM, Invoicing, and Expense manager designed specifically for freelancers. It combines lead management, project tracking, professional billing, and expense logging into a single, high-performance web dashboard.',
     tags: ['Next.js', 'Firebase', 'Tailwind CSS'],
     repo: 'https://github.com/silassdev/octa-enigma',
-    live: 'https://allpilar.xyz/',
+    live: 'https://micro-crm-chi.vercel.app/',
     image: '/micro.png',
   },
   {
