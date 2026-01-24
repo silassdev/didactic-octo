@@ -20,6 +20,16 @@ export const projects: Project[] = [
     live: 'https://allpilar.xyz/',
     image: '/aps.png',
   },
+   {
+    id: 'micro-crm',
+    title: 'Smart CRM',
+    description: 'Manage your contacts with tags and status tracking. Seamlessly transition leads into clients as you close deals.',
+    details: 'Micro-CRM is a sleek, all-in-one CRM, Invoicing, and Expense manager designed specifically for freelancers. It combines lead management, project tracking, professional billing, and expense logging into a single, high-performance web dashboard.',
+    tags: ['Next.js', 'Firebase', 'Tailwind CSS'],
+    repo: 'https://github.com/silassdev/octa-enigma',
+    live: 'https://allpilar.xyz/',
+    image: '/micro.png',
+  },
   {
     id: 'shepherd-ai',
     title: 'Shepherd-Ai',
