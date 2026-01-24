@@ -39,7 +39,7 @@ export default function About() {
         >
           <div className="relative aspect-square w-full rounded-3xl overflow-hidden bg-indigo-600 shadow-2xl group">
             <img
-              src="/silassdev.png"
+              src="/silas.png"
               alt="Silas Tyokaha — Developer"
               className="w-full h-full object-cover object-center transform-gpu scale-110 transition-transform duration-700"
             />
