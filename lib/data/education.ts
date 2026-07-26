@@ -34,34 +34,50 @@ export const education: EducationItem[] = [
     },
     {
         id: 'cert3',
-        institution: 'Benue State Polytechnic, Ugbokolo',
-        degree: 'Higher National Diploma in Telecommunication Technology',
-        year: '2024 — 2026',
-        url: 'https://example.com',
-        logo: '/bsp.png'
+        institution: 'IBM',
+        degree: 'Cybersecurity Fundamentals Certificate',
+        year: '2026',
+        url: 'https://www.credly.com/badges/fb72aeb7-4ed7-43f0-9667-f4e2cae92cb3/',
+        logo: '/ibm.png'
     },
     {
         id: 'cert4',
-        institution: 'Benue State Polytechnic, Ugbokolo',
-        degree: 'Higher National Diploma in Telecommunication Technology',
-        year: '2024 — 2026',
-        url: 'https://example.com',
-        logo: '/bsp.png'
+        institution: 'IBM',
+        degree: 'Digital Mindset',
+        year: '2026',
+        url: 'https://www.credly.com/badges/06ec2447-4e1f-45ad-aa53-4d2401ab5b62/linked_in_profile',
+        logo: '/ibm.png'
     },
     {
         id: 'cert5',
-        institution: 'Benue State Polytechnic, Ugbokolo',
-        degree: 'Higher National Diploma in Telecommunication Technology',
-        year: '2024 — 2026',
-        url: 'https://example.com',
-        logo: '/bsp.png'
+        institution: 'IBM',
+        degree: 'Web Development Fundamentals',
+        year: '2026',
+        url: 'https://www.credly.com/badges/c5d0ccd0-a41b-4340-b150-4b70192e7975',
+        logo: '/ibm.png'
     },
     {
         id: 'cert6',
-        institution: 'Benue State Polytechnic, Ugbokolo',
-        degree: 'Higher National Diploma in Telecommunication Technology',
-        year: '2024 — 2026',
-        url: 'https://example.com',
-        logo: '/bsp.png'
+        institution: 'AI IXX',
+        degree: 'Python for AI',
+        year: '2026',
+        url: 'https://aiixx.ai/certificates/view/12529',
+        logo: '/aix.png'
+    },
+    {
+        id: 'cert7',
+        institution: 'Dataflair',
+        degree: 'Free Web Development Course – Learn HTML, CSS ',
+        year: '2023',
+        url: 'https://data-flair.training/verify/7A51735CFE-7A33E34E56-73436DE684/',
+        logo: '/dataf.png'
+    },
+    {
+        id: 'cert8',
+        institution: 'Dataflair',
+        degree: 'Free Angular Certification Course',
+        year: '2024',
+        url: 'https://data-flair.training/verify/7597B798CF-7361598312-73436DE684/',
+        logo: '/dataf.png'
     }
 ];

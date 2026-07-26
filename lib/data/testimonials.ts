@@ -19,14 +19,14 @@ const testimonials: Testimonial[] = [
         quote: 'Delivered a performant LMS under tight deadlines — thoughtful architecture and excellent communication.',
         author: 'David Okoro',
         role: 'Engineering Lead',
-        avatar: '/star-6.png'
+        avatar: '/xaltuis.png'
     },
     {
         id: 't3',
         quote: 'Great mentor and a pragmatic engineer. Helped level up the team’s testing culture and CI pipelines.',
         author: 'Fatima Yusuf',
         role: 'Senior Developer',
-        avatar: '/star-6.png'
+        avatar: '/xaltuis.png'
     }
 ];
 
