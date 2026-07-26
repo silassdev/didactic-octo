@@ -59,11 +59,13 @@ export default function About() {
 
           <div className="space-y-6 text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
             <p>
-              I am a full-stack software engineer focused on designing scalable backend systems — API design, background processing, authentication, and data modelling — paired with performance-oriented frontends built with React and Next.js (TypeScript, SSR).
+             I'm a full-stack software engineer who builds scalable, reliable web applications with a strong focus on backend engineering, including API design, authentication, background jobs, and data modeling.
             </p>
 
             <p>
-              I deliver features end-to-end with an emphasis on clean abstractions, predictable data flows, automated testing, observability, and production reliability.
+              I began my journey with JavaScript, then expanded into React and TypeScript. To build affordable, production-ready solo projects, I adopted PHP, Laravel, and MySQL. During my studies, I also learned C++ and object-oriented programming, which strengthened my understanding of software design and core programming concepts.
+
+              Through online courses and professional bootcamps, I've continued to sharpen my skills and stay current with modern development practices. I enjoy delivering features end-to-end with an emphasis on clean architecture, predictable data flows, automated testing, observability, and production reliability.
             </p>
 
             <div>
