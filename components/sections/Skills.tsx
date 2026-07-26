@@ -23,6 +23,10 @@ import {
   SiFramer,
   SiJest,
   SiGit,
+  SiCplusplus,
+  SiCpanel,
+  SiPostman,
+  SiLivewire,
   SiMongodb,
 } from 'react-icons/si';
 
@@ -37,14 +41,6 @@ function LivewireIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-function CPanelIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.06" />
-      <path d="M7 12h10M12 7v10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
 
 type Skill = { id: string; name: string; Icon: React.ComponentType<any> };
 
@@ -68,8 +64,9 @@ const tools: Skill[] = [
   { id: 'github', name: 'GitHub', Icon: FaGithub },
   { id: 'framer', name: 'Framer Motion', Icon: SiFramer },
   { id: 'jest', name: 'Jest', Icon: SiJest },
-  { id: 'livewire', name: 'Livewire', Icon: LivewireIcon },
-  { id: 'cpanel', name: 'cPanel', Icon: CPanelIcon },
+  { id: 'livewire', name: 'Livewire', Icon: SiLivewire },
+  { id: 'cpanel', name: 'cPanel', Icon: SiCpanel },
+  { id: 'postman', name: 'Postman', Icon: SiPostman },
 ];
 
 const databases: Skill[] = [
@@ -83,6 +80,7 @@ const languages: Skill[] = [
   { id: 'js', name: 'JavaScript', Icon: SiJavascript },
   { id: 'php', name: 'PHP', Icon: FaPhp },
   { id: 'java', name: 'Java', Icon: FaJava },
+  { id: 'cpp', name: 'C++', Icon: SiCplusplus },
 ];
 
 const groups = [
