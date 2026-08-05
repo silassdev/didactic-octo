@@ -44,7 +44,6 @@ export const projects: Project[] = [
     details: 'CryptoCore is a platform that distributes daily yield dividends across 5 optimized Membership Levels. Deposit BTC, ETH, USDT, or BNB, and experience seamless, risk-adjusted quantitative ROI execution.',
     tags: ['Laravel', 'PHP', 'MySQL', 'Alpine.js', 'Tailwind', 'Vite'],
     repo: 'https://github.com/silassdev/spe',
-    live: 'https://escomshop.vercel.app/',
     image: '/cryptocore.png',
   },
    {
@@ -54,7 +53,6 @@ export const projects: Project[] = [
     details: 'Robust Role-based e-commerce platform purpose-built for selling handcrafted bracelets, anklets, necklaces, and beaded accessories.',
     tags: ['Laravel', 'PHP', 'MySQL', 'Alpine.js', 'Tailwind', 'Vite'],
     repo: 'https://github.com/silassdev/tat',
-    live: 'https://escomshop.vercel.app/',
     image: '/eshop.png',
   },
   
@@ -95,7 +93,6 @@ export const projects: Project[] = [
     details: 'A modern scaffold of a computer online store. Includes a lightweight admin system.',
     tags: ['Next.js', 'TypeScript', 'MongoDB', 'Tailwind.css'],
     repo: 'https://github.com/silassdev/fantastic-giggle',
-    live: 'https://escomshop.vercel.app/',
     image: '/ecommerce.png',
   },
   {
@@ -175,7 +172,6 @@ export const projects: Project[] = [
     details: 'A Minimal full-stack Library Management System Demostrating CRUD Operations.',
     tags: ['Spring Boot', 'Docker', 'JPA', 'MySQL'],
     repo: 'https://github.com/silassdev/library-management-backend',
-    live: 'https://library-management-frontend-ashen.vercel.app/',
     image: '/library.png',
   },
   {

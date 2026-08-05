@@ -92,7 +92,7 @@ export default function Contact() {
             <div className="space-y-6">
               {[
                 { label: 'Email', value: '9shila@gmail.com', href: 'mailto:9shila@gmail.com' },
-                { label: 'Location', value: 'Lagos, Nigeria', href: '#' },
+                { label: 'Location', value: 'Benue, Nigeria', href: '#' },
                 { label: 'Availability', value: 'Open for new projects', href: '#' },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col">

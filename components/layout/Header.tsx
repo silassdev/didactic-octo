@@ -38,7 +38,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-sm hover:scale-105 transition-transform duration-200 shadow-lg shadow-indigo-500/10"
           >
-            Resume
+          My Resume
           </a>
         </nav>
 
@@ -71,14 +71,6 @@ export default function Header() {
                 {item}
               </Link>
             ))}
-            <a
-              href="https://apltoday.com/wp-content/uploads/2025/11/silassdev.docx"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 px-4 py-3 rounded-xl bg-indigo-600 text-white text-sm font-medium text-center shadow-lg shadow-indigo-500/20"
-            >
-              Download CV
-            </a>
           </nav>
         </div>
       </motion.div>
